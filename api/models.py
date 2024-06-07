@@ -6,19 +6,19 @@ from django.contrib.auth.models import User
 
 class Customer(models.Model):
 
-    name=models.CharField(max_length=200)
+    name = models.CharField(max_length=200)
 
-    email=models.CharField(max_length=200)
+    email = models.CharField(max_length=200)
 
-    phone=models.CharField(max_length=200)
+    phone = models.CharField(max_length=200)
 
-    vehicle_number=models.CharField(max_length=200)
+    vehicle_number = models.CharField(max_length=200)
 
-    running_km=models.PositiveIntegerField()
+    running_km = models.PositiveIntegerField()
 
-    technician=models.ForeignKey(User,on_delete=models.CASCADE)
+    technician = models.ForeignKey(User,on_delete=models.CASCADE)
 
-    options=(
+    options = (
 
         ("pending","pending"),
 
@@ -27,13 +27,13 @@ class Customer(models.Model):
         ("completed","completed")
     )
 
-    status=models.CharField(max_length=200,choices=options,default="pending")
+    status = models.CharField(max_length=200,choices=options,default="pending")
 
-    created_date=models.DateTimeField(auto_now_add=True)
+    created_date = models.DateTimeField(auto_now_add=True)
 
-    update_date=models.DateTimeField(auto_now=True)
+    update_date = models.DateTimeField(auto_now=True)
 
-    is_active=models.BooleanField(default=True)
+    is_active = models.BooleanField(default=True)
 
     def __str__(self) -> str:
 
@@ -42,23 +42,20 @@ class Customer(models.Model):
 
 class Work(models.Model):
 
-    title=models.CharField(max_length=200)
+    title = models.CharField(max_length=200)
 
-    description=models.TextField()
+    description = models.TextField()
 
-    amount=models.PositiveIntegerField()
+    amount = models.PositiveIntegerField()
 
-    customer=models.ForeignKey(Customer,on_delete=models.CASCADE)
+    customer = models.ForeignKey(Customer,on_delete=models.CASCADE)
 
-    created_date=models.DateTimeField(auto_now_add=True)
+    created_date = models.DateTimeField(auto_now_add=True)
 
-    update_date=models.DateTimeField(auto_now=True)
+    update_date = models.DateTimeField(auto_now=True)
 
-    is_active=models.BooleanField(default=True)
+    is_active = models.BooleanField(default=True)
 
     def __str__(self) -> str:
 
         return self.title
-
-
-

@@ -15,11 +15,11 @@ class CustomerViewSetView(ModelViewSet):
 
     serializer_class = CustomerSerializer
 
-    queryset=Customer.objects.all()
+    queryset = Customer.objects.all()
 
-    authentication_classes=[authentication.TokenAuthentication]
+    authentication_classes = [authentication.TokenAuthentication]
 
-    permission_classes=[permissions.IsAdminUser]
+    permission_classes = [permissions.IsAdminUser]
 
     def perform_create(self, serializer):
         
