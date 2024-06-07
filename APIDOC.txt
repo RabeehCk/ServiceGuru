@@ -2,89 +2,94 @@
 
 1)api for fetching token
 
-    url: http://127.0.0.1:8000/api/token/
+    url : http://127.0.0.1:8000/api/token/
 
-    method:POST
+    method : POST
 
-    body:{username,password}
+    body : {username,password}
 
-    authentication:Nill
+    authentication : nil
 
 
-schema:Customer
-attributes:[
-                name,
-                email,
-                phone,
-                vehicle_number,
-                running_km,
-                technician,
-                status,
-                created_date,
-                update_date,
-                is_active
-                ]
+=============================================================end=============================================================
+
+
+schema : Customer
+attributes : {
+            name,
+            email,
+            phone,
+            vehicle_number,
+            running_km,
+            technician,
+            status,
+            created_date,
+            update_date,
+            is_active
+            }
+
 
 2)api for listing all customers
 
-    url: http://127.0.0.1:8000/api/customers/
+    url : http://127.0.0.1:8000/api/customers/
 
-    method:GET
+    method : GET
 
-    body:Nill
+    body : nil
 
-    authentication:Token
+    authentication : Token
+
 
 3)api for adding  customer
 
-    url: http://127.0.0.1:8000/api/customers/
+    url : http://127.0.0.1:8000/api/customers/
 
-    method:POST
+    method : POST
 
-    body:{ name,
+    body : { name,
             email,
             phone,
             vehicle_number,
             running_km,}
 
-    authentication:Token
+    authentication : Token
 
 
 4)api for retrieving customer details
 
-    url: http://127.0.0.1:8000/api/customers/{id}/
+    url : http://127.0.0.1:8000/api/customers/{id}/
 
-    method:GET
+    method : GET
 
-    body:Nill
+    body : nil
 
-    authentication:Token
+    authentication : Token
 
 
 5)api for updating  customer detail
 
-    url: http://127.0.0.1:8000/api/customers/{id}/
+    url : http://127.0.0.1:8000/api/customers/{id}/
 
-    method:PUT
+    method : PUT
 
-     body:{ name,
-            email,
-            phone,
-            vehicle_number,
-            running_km,}
-
+    body : { name,
+             email,
+             phone,
+             vehicle_number,
+             running_km,
+            }
 
     authentication:Token
 
 
 6)api for deleting customer 
 
-    url: http://127.0.0.1:8000/api/customers/{id}/
+    url : http://127.0.0.1:8000/api/customers/{id}/
 
-    method:DELETE
+    method : DELETE
 
-    body:Nill
+    body : nil
 
-    authentication:Token
+    authentication : Token
 
 
