@@ -66,7 +66,7 @@ attributes : {
     authentication : Token
 
 
-5)api for updating  customer detail
+5)api for updating customer
 
     url : http://127.0.0.1:8000/api/customers/{id}/
 
@@ -83,6 +83,68 @@ attributes : {
 
 
 6)api for deleting customer 
+
+    url : http://127.0.0.1:8000/api/customers/{id}/
+
+    method : DELETE
+
+    body : nil
+
+    authentication : Token
+
+
+
+7)api for adding  customer
+
+    url : http://127.0.0.1:8000/api/customers/{id}/add_work/
+
+    method : POST
+
+    body : {title,
+            description,
+            amount
+    }
+
+    authentication : Token
+
+
+8)api for listing all customers
+
+    url : http://127.0.0.1:8000/api/customers/
+
+    method : GET
+
+    body : nil
+
+    authentication : Token
+
+
+9)api for retrieving customer details
+
+    url : http://127.0.0.1:8000/api/customers/{id}/
+
+    method : GET
+
+    body : nil
+
+    authentication : Token
+
+
+10)api for updating customer
+
+    url : http://127.0.0.1:8000/api/customers/{id}/
+
+    method : PUT
+
+    body : { title,
+            description,
+            amount
+            }
+
+    authentication:Token
+
+
+11)api for deleting customer 
 
     url : http://127.0.0.1:8000/api/customers/{id}/
 
